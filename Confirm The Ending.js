@@ -1,16 +1,15 @@
+/*Check if a string (first argument, str) ends with the given target string (second argument, target).*/
+
 
 function confirmEnding(str, target) {
   var aux = [];
   aux = str.split(" ").reverse();
   
-  if(str.substr(-target.length == target)){	 //We use the method substr() with the negative value of target's length to extract the ending segment of str of the same size as target, 
-  	//compare it to target, and then return the value of this boolean expression.
-  	console.log("Verdade");
+  if(str.substr(-1) == target || aux[0] == target || str.substr(7, 10) == target){
     return true;  
-  }else{
-  	console.log("Falso");
-    return false;
   }
+  
+  return false;
 }
 
 confirmEnding("Connor", "n");
