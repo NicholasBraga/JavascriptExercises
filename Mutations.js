@@ -13,10 +13,10 @@ function mutation(arr) {
   if(count == arr[1].length){	//Se o valor de count for igual ao comprimento do segundo argumento do array, retornar TRUE
   	console.log("Possui todos os caracteres! Valor de count: " + count);
   	return true;
-  }else{	//Se o valor de count for diferente do comprimento do segundo argumento do array, retornar FALSE
-  	console.log("Não possui todos os caracteres... \nValor de count: " + count + "\nValor esperado: " + arr[1].length);
-  	return false;
   }
+	//Se o valor de count for diferente do comprimento do segundo argumento do array, retornar FALSE
+	console.log("Não possui todos os caracteres... \nValor de count: " + count + "\nValor esperado: " + arr[1].length);
+  	return false;
 }
 
 mutation(["voodoo", "no"]);
