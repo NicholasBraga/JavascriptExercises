@@ -1,13 +1,4 @@
-//Resolução - Git
-/*function destroyer(arr) {
-  var args = Array.prototype.slice.call(arguments);
-  args.splice(0, 1);
-  return arr.filter(function(element) {
-    return args.indexOf(element) === -1;
-  });
-}*/
-
-//Tentativa de criar um array apenas com os itens desejados
+//Cria um array com apenas os itens desejados
 function destroyer(arr, ...values) {
   var newarr = [];
 
