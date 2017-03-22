@@ -1,20 +1,20 @@
+/*Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
+
+Note that inserting the three dots to the end will add to the string length.
+
+However, if the given maximum string length num is less than or equal to 3, then the addition of the three dots does not add to the string length in determining the truncated string.*/
 
 function truncateString(str, num) {
 
-	if(str.length <= num){	//Se o comprimento da string for menor ou igual ao da variável "num"...
-		console.log("Primeiro IF");
-		console.log(str);	//Imprime a string inteira, sem modificações.
+	if(str.length <= num){
+		return str;
 	}else{
-		if(num <= 3){	//Se a variável "num" tiver um valor menor ou igual a 3...
-			console.log("Segundo IF");
-			console.log(str.slice(0, num) + "...");	//Imprime apenas as letras do índice 0 até o índice referente ao valor da variável "num" e adiciona "..."
-		}else{	//Se o comprimento da string for maior que o valor da variável "num"
-				console.log("Terceiro IF");
-				console.log(str.slice(0, num-3) + "...");	//Imprime apenas as letras do índice 0 até o índice referente ao valor da variável "num" - 3 posições e acrescenta "..."
+		if(num <= 3){
+			return str.slice(0, num) + "...";
+		}else{
+				return str.slice(0, num-3) + "...";
 		}
 	}
-  
-  return str;
 }
 
-truncateString("A-tisket a-tasket A green and yellow basket", 11);
+truncateString("Absolutely Longer", 2);
